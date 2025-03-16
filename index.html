@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Home</title>
+    <!-- Importando a fonte Unkempt do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definindo a fonte Unkempt como padrão */
+        body {
+            font-family: 'Unkempt', cursive;
+        }
+
+        .neumorphic {
+            background: #e0e8f0;
+            box-shadow: 8px 8px 16px rgba(163, 177, 198, 0.6),
+                        -8px -8px 16px rgba(255, 255, 255, 0.5);
+        }
+        .neumorphic-inset {
+            background: #e0e8f0;
+            box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6),
+                        inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header com Carrossel -->
+    <header class="neumorphic p-6 mb-8">
+        <nav class="container mx-auto flex items-center justify-between mb-6">
+            <h1 class="text-3xl font-bold text-[#1E3A8A]">Podcast Escolar</h1>
+            <div class="space-x-5">
+                <a href="https://educ.nekoweb.org/podcastescolar/sobre.html" class="text-[#1E3A8A] hover:text-[#152c66]">Sobre</a>
+                <a href="https://educ.nekoweb.org/podcastescolar/sobre.html" class="text-[#1E3A8A] hover:text-[#152c66]">Contato</a>
+            </div>
+        </nav>
+        <!-- Carrossel -->
+        <div class="relative container mx-auto">
+            <div id="carousel" class="rounded-xl overflow-hidden">
+                <!-- Item 1 -->
+                <div class="carousel-item active relative">
+                    <img src="https://educ.nekoweb.org/podcastescolar/microphone-2618102_1280.jpg" alt="Slide 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <h2 class="text-3xl font-bold text-white">Bem-vindo ao PodcastVerse</h2>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="carousel-item relative">
+                    <img src="https://educ.nekoweb.org/podcastescolar/podcast-4209770_1280.jpg" alt="Slide 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <h2 class="text-3xl font-bold text-white">Novos Episódios Toda Semana</h2>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="carousel-item relative">
+                    <img src="https://educ.nekoweb.org/podcastescolar/smartphone-2471542_1280.jpg" alt="Slide 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                        <h2 class="text-3xl font-bold text-white">Explore Tópicos Incríveis</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Botões do Carrossel -->
+            <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#1E3A8A] text-white p-2 rounded-full hover:bg-[#152c66]">&#10094;</button>
+            <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#1E3A8A] text-white p-2 rounded-full hover:bg-[#152c66]">&#10095;</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4">
+        <!-- Podcast Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Podcast 1 -->
+            <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/mic-4250217_640.jpg" alt="Capa Podcast 1" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 1: </h3>
+                <p class="text-gray-600 mb-4">Uma conversa sobre como a inteligência artificial está moldando nosso mundo.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+
+            <!-- Podcast 2 -->
+            <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/podcast-7693636_640.jpg" alt="Capa Podcast 2" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 2: </h3>
+                <p class="text-gray-600 mb-4">Explorando o impacto da internet na sociedade moderna.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+           <!-- Podcast 3 -->
+           <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/podcast-7693636_640.jpg" alt="Capa Podcast 2" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 2: </h3>
+                <p class="text-gray-600 mb-4">Explorando o impacto da internet na sociedade moderna.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+            <!-- Podcast 4 -->
+           <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/podcast-7693636_640.jpg" alt="Capa Podcast 2" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 2: </h3>
+                <p class="text-gray-600 mb-4">Explorando o impacto da internet na sociedade moderna.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+            <!-- Podcast 5 -->
+           <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/podcast-7693636_640.jpg" alt="Capa Podcast 2" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 2: </h3>
+                <p class="text-gray-600 mb-4">Explorando o impacto da internet na sociedade moderna.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+            <!-- Podcast 6 -->
+           <div class="neumorphic rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <img src="https://educ.nekoweb.org/podcastescolar/podcast-7693636_640.jpg" alt="Capa Podcast 2" class="rounded-lg w-full mb-4">
+                <h3 class="text-xl font-semibold text-[#1E3A8A] mb-2">Episódio 2: </h3>
+                <p class="text-gray-600 mb-4">Explorando o impacto da internet na sociedade moderna.</p>
+                <audio controls class="w-full neumorphic-inset rounded-full">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="neumorphic mt-12 py-6 px-8 flex items-center justify-between">
+        <!-- Logo e Nome da Escola -->
+        <div class="flex items-center space-x-4">
+            <img src="https://educ.nekoweb.org/podcastescolar/logosemfundo.png" alt="Logo da Escola" class="w-20 h-20 rounded-full">
+            <div>
+                <p class="text-lg font-bold text-[#1E3A8A]">Escola Januário E. de Lima</p>
+                <p class="text-sm text-gray-600"><strong>Cairu de Salinas</strong></p>
+            </div>
+        </div>
+        <!-- Direitos Autorais -->
+        <div class="text-right">
+            <p class="text-gray-600"><strong>© 2025 Projeto Didático 9º Ano - LPT</strong></p>
+            <p class="text-gray-600"><strong>Literatura e Produção Textual - Profº Sérgio Araújo</strong></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para o Carrossel -->
+    <script>
+        const carousel = document.getElementById('carousel');
+        const items = carousel.getElementsByClassName('carousel-item');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove('active');
+            }
+            items[index].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showSlide(currentIndex);
+        });
+
+        // Auto-avanço a cada 5 segundos
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showSlide(currentIndex);
+        }, 5000);
+    </script>
+</body>
+</html>
